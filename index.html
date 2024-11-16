@@ -3,180 +3,764 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LivingLeaving - Interieurvormgeving & Verkoopstyling</title>
+    <title>Living and Leaving - Transforming Spaces for New Beginnings</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
   <body>
-    <header>
+    <header class="sticky-header">
+      <div class="announcement-bar">
+        <p data-i18n="announcement.text">
+          New: Book a free consultation for your interior design project
+        </p>
+      </div>
       <nav class="main-nav">
-        <div class="logo">
-          <img src="images/logo.svg" alt="LivingLeaving Logo" />
+        <div class="nav-container">
+          <div class="logo">
+            <a href="#home">
+              <img src="images/logo.svg" alt="Living and Leaving Logo" />
+            </a>
+          </div>
+
+          <div class="nav-right">
+            <div class="language-switcher-container">
+              <select id="language-switcher" class="language-switcher">
+                <option value="nl">NL</option>
+                <option value="en">EN</option>
+              </select>
+            </div>
+            <ul class="nav-links">
+              <li><a href="#home" data-i18n="nav.home">Home</a></li>
+              <li class="dropdown">
+                <a href="#services" data-i18n="nav.services"
+                  >Services <i class="fas fa-chevron-down"></i
+                ></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#verkoopstyling">Verkoopstyling</a></li>
+                  <li><a href="#meubelverhuur">Meubelverhuur</a></li>
+                  <li><a href="#interieuradvies">Interieuradvies</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+              </li>
+              <li><a href="#about" data-i18n="nav.aboutUs">About Us</a></li>
+              <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-cta">
+              <a
+                href="#contact"
+                class="cta-button"
+                data-i18n="about.cta.primary"
+                >Work with Us</a
+              >
+            </div>
+
+            <button class="mobile-menu" aria-label="Menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
         </div>
-        <ul class="nav-links">
-          <li><a href="#living-info">Living Info</a></li>
-          <li><a href="#leaving-styling">Leaving Styling</a></li>
-          <li><a href="#portfolio-living">Portfolio Living</a></li>
-          <li><a href="#portfolio-leaving">Portfolio Leaving</a></li>
-          <li><a href="#voor-makelaars">Voor Makelaars</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
       </nav>
     </header>
 
     <main>
-      <section class="hero">
-        <h1>Transformeer uw ruimte met professionele styling</h1>
-        <h2>Interieurvormgeving & Verkoopstyling voor maximale impact</h2>
-        <a href="#diensten" class="cta-button">Ontdek onze diensten</a>
-      </section>
-
-      <section id="diensten" class="services">
-        <div class="service-card">
-          <h3>Living - Interieurvormgeving</h3>
-          <p>Professioneel advies voor uw perfecte interieur</p>
-          <a href="#living-info" class="button">Meer informatie</a>
+      <section id="home" class="hero">
+        <div class="hero-background">
+          <!-- This div will hold the background image/overlay -->
         </div>
-
-        <div class="service-card">
-          <h3>Leaving - Verkoopstyling</h3>
-          <p>Optimale presentatie voor een snelle verkoop</p>
-          <a href="#leaving-styling" class="button">Meer informatie</a>
-        </div>
-      </section>
-
-      <section id="living-info" class="content-section">
-        <h2>Living - Interieurvormgeving</h2>
-        <div class="content-grid">
-          <div class="text-content">
-            <h3>Uw droominterieur werkelijkheid</h3>
-            <p>
-              Bij LivingLeaving helpen we u bij het creëren van een interieur
-              dat perfect bij u past. Of het nu gaat om een complete make-over
-              of het toevoegen van finishing touches, wij staan voor u klaar.
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>
+              <span data-i18n="hero.title">Living and Leaving:</span>
+              <span data-i18n="hero.subtitle">Transforming Spaces</span>
+            </h1>
+            <p class="hero-subtitle" data-i18n="hero.description">
+              Creating beautiful interiors that tell your story and stage homes
+              that sell
             </p>
-            <h4>Onze diensten omvatten:</h4>
-            <ul>
-              <li>Interieuradvies op maat</li>
-              <li>Kleur- en materiaaladvies</li>
-              <li>Meubelplan en indeling</li>
-              <li>Verlichting en accessoires</li>
-              <li>3D-visualisaties</li>
-            </ul>
+            <div class="hero-cta">
+              <a
+                href="#services"
+                class="cta-button primary"
+                data-i18n="hero.cta.primary"
+                >Discover Our Services</a
+              >
+              <a
+                href="#portfolio"
+                class="cta-button secondary"
+                data-i18n="hero.cta.secondary"
+                >View Portfolio</a
+              >
+            </div>
           </div>
-          <div class="image-gallery">
-            <!-- Placeholder for images -->
+          <div class="hero-features">
+            <div class="feature">
+              <i class="fas fa-home"></i>
+              <span data-i18n="hero.features.staging"
+                >Professional Staging</span
+              >
+            </div>
+            <div class="feature">
+              <i class="fas fa-paint-brush"></i>
+              <span data-i18n="hero.features.interior">Interior Design</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-couch"></i>
+              <span data-i18n="hero.features.furniture">Furniture Rental</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="leaving-styling" class="content-section">
-        <h2>Leaving - Verkoopstyling</h2>
-        <div class="content-grid">
-          <div class="text-content">
-            <h3>Maximaliseer uw verkoopkansen</h3>
-            <p>
-              Met onze verkoopstyling zorgen we ervoor dat uw woning optimaal
-              gepresenteerd wordt aan potentiële kopers. We creëren een
-              aantrekkelijke, neutrale sfeer die de beste eigenschappen van uw
-              woning benadrukt.
+      <section id="about" class="section about-section">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-content">
+              <span class="section-tag" data-i18n="about.tag">About Us</span>
+              <h2 data-i18n="about.title">
+                Transforming Spaces with Passion and Expertise
+              </h2>
+              <p class="about-intro" data-i18n="about.intro">
+                At Living and Leaving, we believe every space has a story to
+                tell. With our expertise in interior design and home staging, we
+                help bring these stories to life.
+              </p>
+
+              <div class="about-features">
+                <div class="feature-item">
+                  <i class="fas fa-medal"></i>
+                  <div class="feature-text">
+                    <h4 data-i18n="about.features.experience.title">
+                      15+ Years Experience
+                    </h4>
+                    <p data-i18n="about.features.experience.text">
+                      Proven track record in transforming spaces across
+                      Netherlands
+                    </p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-home"></i>
+                  <div class="feature-text">
+                    <h4>500+ Projects</h4>
+                    <p>Successfully completed interior and staging projects</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-star"></i>
+                  <div class="feature-text">
+                    <h4>100% Satisfaction</h4>
+                    <p>Committed to exceeding client expectations</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="about-cta">
+                <a href="#contact" class="button primary">Work With Us</a>
+                <a href="#portfolio" class="button secondary"
+                  >View Our Projects</a
+                >
+              </div>
+            </div>
+
+            <div class="about-images">
+              <div class="image-stack">
+                <div class="image-wrapper main-image">
+                  <img
+                    src="images/about-main.jpg"
+                    alt="Interior design project showcase"
+                  />
+                </div>
+                <div class="image-wrapper overlay-image">
+                  <img
+                    src="images/about-overlay.jpg"
+                    alt="Home staging transformation"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section services-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag" data-i18n="services.tag"
+              >Our Services</span
+            >
+            <h2 data-i18n="services.title">Transform Your Space</h2>
+            <p class="section-intro" data-i18n="services.intro">
+              We offer comprehensive solutions for both living spaces and
+              properties for sale, ensuring each space reaches its full
+              potential.
             </p>
-            <h4>Wat wij bieden:</h4>
-            <ul>
-              <li>Professionele styling voor verkoop</li>
-              <li>Verhuur van meubels en accessoires</li>
-              <li>Fotostyling voor makelaars</li>
-              <li>Advies voor kleine aanpassingen</li>
-              <li>Complete woning-metamorfose</li>
-            </ul>
           </div>
-          <div class="image-gallery">
-            <!-- Placeholder for images -->
+
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-home"></i>
+              </div>
+              <div class="service-content">
+                <h3>Verkoopstyling</h3>
+                <p>
+                  Professional home staging to maximize your property's selling
+                  potential
+                </p>
+                <ul class="service-features">
+                  <li><i class="fas fa-check"></i> Full property assessment</li>
+                  <li>
+                    <i class="fas fa-check"></i> Strategic furniture placement
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> Decor selection and styling
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> Professional photography prep
+                  </li>
+                </ul>
+                <div class="service-cta">
+                  <a
+                    href="#contact"
+                    class="button primary"
+                    data-i18n="services.verkoopstyling.cta.primary"
+                    >Get Started</a
+                  >
+                  <a
+                    href="#portfolio"
+                    class="button text"
+                    data-i18n="services.verkoopstyling.cta.secondary"
+                    >View Projects</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-couch"></i>
+              </div>
+              <div class="service-content">
+                <h3>Meubelverhuur</h3>
+                <p>
+                  Quality furniture rental solutions for staging and temporary
+                  needs
+                </p>
+                <ul class="service-features">
+                  <li>
+                    <i class="fas fa-check"></i> Curated furniture selection
+                  </li>
+                  <li><i class="fas fa-check"></i> Flexible rental periods</li>
+                  <li>
+                    <i class="fas fa-check"></i> Delivery and installation
+                  </li>
+                  <li><i class="fas fa-check"></i> Complete room packages</li>
+                </ul>
+                <div class="service-cta">
+                  <a href="#contact" class="button primary">Rent Now</a>
+                  <a href="#catalog" class="button text"
+                    >View Catalog <i class="fas fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-paint-brush"></i>
+              </div>
+              <div class="service-content">
+                <h3>Interieuradvies</h3>
+                <p>
+                  Expert interior design advice for your perfect living space
+                </p>
+                <ul class="service-features">
+                  <li>
+                    <i class="fas fa-check"></i> Color and material consultation
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> Space planning and layout
+                  </li>
+                  <li><i class="fas fa-check"></i> Custom design solutions</li>
+                  <li><i class="fas fa-check"></i> Furniture selection</li>
+                </ul>
+                <div class="service-cta">
+                  <a href="#contact" class="button primary"
+                    >Book Consultation</a
+                  >
+                  <a href="#portfolio" class="button text"
+                    >See Designs <i class="fas fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="portfolio-living" class="portfolio-section">
-        <h2>Portfolio Living</h2>
-        <div class="portfolio-grid">
-          <!-- Portfolio items will be added here -->
-        </div>
-      </section>
-
-      <section id="portfolio-leaving" class="portfolio-section">
-        <h2>Portfolio Leaving</h2>
-        <div class="portfolio-grid">
-          <!-- Portfolio items will be added here -->
-        </div>
-      </section>
-
-      <section id="voor-makelaars" class="content-section">
-        <h2>Voor Makelaars</h2>
-        <div class="content-grid">
-          <div class="text-content">
-            <h3>Samenwerking met makelaars</h3>
-            <p>
-              Wij bieden speciale pakketten voor makelaars om woningen optimaal
-              te presenteren. Van snelle styling tot complete inrichting, wij
-              zorgen voor een professionele uitstraling die verkoopt.
+      <section id="portfolio" class="section portfolio-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag" data-i18n="portfolio.tag">Portfolio</span>
+            <h2 data-i18n="portfolio.title">Our Portfolio</h2>
+            <p class="section-intro" data-i18n="portfolio.intro">
+              Discover our collection of transformative projects, from stunning
+              interior designs to successful home staging.
             </p>
-            <h4>Onze makelaarspakketten:</h4>
-            <ul>
-              <li>Basis styling pakket</li>
-              <li>Premium styling pakket</li>
-              <li>Fotografie styling</li>
-              <li>Langdurige verhuur meubels</li>
-            </ul>
+          </div>
+
+          <div class="portfolio-filters">
+            <button
+              class="filter-button active"
+              data-filter="all"
+              data-i18n="portfolio.filters.all"
+            >
+              All
+            </button>
+            <button
+              class="filter-button"
+              data-filter="interior"
+              data-i18n="portfolio.filters.interior"
+            >
+              Interior Design
+            </button>
+            <button
+              class="filter-button"
+              data-filter="staging"
+              data-i18n="portfolio.filters.staging"
+            >
+              Home Staging
+            </button>
+          </div>
+
+          <div class="portfolio-grid">
+            <!-- Portfolio Item 1 -->
+            <div class="portfolio-item" data-category="interior">
+              <div class="portfolio-image">
+                <img
+                  src="https://via.placeholder.com/600x400"
+                  alt="Modern Living Room Design"
+                />
+                <div class="portfolio-overlay">
+                  <div class="portfolio-content">
+                    <h3>Modern Living Room</h3>
+                    <p>Interior Design</p>
+                    <a href="#" class="portfolio-link">
+                      <i class="fas fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 2 -->
+            <div class="portfolio-item" data-category="staging">
+              <div class="portfolio-image">
+                <img
+                  src="https://via.placeholder.com/600x400"
+                  alt="Home Staging Project"
+                />
+                <div class="portfolio-overlay">
+                  <div class="portfolio-content">
+                    <h3>Luxury Villa Staging</h3>
+                    <p>Home Staging</p>
+                    <a href="#" class="portfolio-link">
+                      <i class="fas fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add more portfolio items as needed -->
+          </div>
+
+          <div class="portfolio-cta">
+            <a href="#contact" class="button primary" data-i18n="portfolio.cta"
+              >Start Your Project</a
+            >
           </div>
         </div>
       </section>
 
-      <section id="contact" class="contact-section">
-        <h2>Contact</h2>
-        <div class="contact-grid">
-          <div class="contact-info">
-            <h3>Neem contact met ons op</h3>
-            <p>Telefoon: +31 (0)6 12345678</p>
-            <p>Email: info@livingleaving.nl</p>
-            <p>Adres: Voorbeeldstraat 123<br />1234 AB Amsterdam</p>
+      <section id="testimonials" class="section testimonials-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag" data-i18n="testimonials.tag"
+              >Testimonials</span
+            >
+            <h2 data-i18n="testimonials.title">Client Testimonials</h2>
+            <p class="section-intro" data-i18n="testimonials.intro">
+              See what our clients say about their experience with us
+            </p>
           </div>
-          <form class="contact-form">
-            <input type="text" placeholder="Naam" required />
-            <input type="email" placeholder="E-mail" required />
-            <input type="tel" placeholder="Telefoon" />
-            <textarea placeholder="Uw bericht" required></textarea>
-            <button type="submit" class="button">Verstuur</button>
-          </form>
+
+          <div class="testimonials-slider">
+            <div class="testimonials-track">
+              <!-- Testimonial 1 -->
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <div class="quote-icon">
+                    <i class="fas fa-quote-right"></i>
+                  </div>
+                  <p class="quote-text" data-i18n="testimonials.items.0.quote">
+                    "Living and Leaving transformed our space beyond our
+                    expectations. Professional, creative, and a joy to work
+                    with!"
+                  </p>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <div class="testimonial-author">
+                  <img
+                    src="https://via.placeholder.com/60"
+                    alt="Client photo"
+                    class="author-image"
+                  />
+                  <div class="author-info">
+                    <h4 data-i18n="testimonials.items.0.name">Sarah Johnson</h4>
+                    <p data-i18n="testimonials.items.0.location">Amsterdam</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 2 -->
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <div class="quote-icon">
+                    <i class="fas fa-quote-right"></i>
+                  </div>
+                  <p class="quote-text" data-i18n="testimonials.items.1.quote">
+                    "The staging service helped sell our house within weeks. The
+                    transformation was incredible!"
+                  </p>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <div class="testimonial-author">
+                  <img
+                    src="https://via.placeholder.com/60"
+                    alt="Client photo"
+                    class="author-image"
+                  />
+                  <div class="author-info">
+                    <h4 data-i18n="testimonials.items.1.name">
+                      Mark van der Berg
+                    </h4>
+                    <p data-i18n="testimonials.items.1.location">Rotterdam</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 3 -->
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <div class="quote-icon">
+                    <i class="fas fa-quote-right"></i>
+                  </div>
+                  <p class="quote-text" data-i18n="testimonials.items.2.quote">
+                    "Their attention to detail and understanding of our style
+                    was impressive. Highly recommended!"
+                  </p>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <div class="testimonial-author">
+                  <img
+                    src="https://via.placeholder.com/60"
+                    alt="Client photo"
+                    class="author-image"
+                  />
+                  <div class="author-info">
+                    <h4 data-i18n="testimonials.items.2.name">Emma de Vries</h4>
+                    <p data-i18n="testimonials.items.2.location">Utrecht</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonials-nav">
+              <button class="nav-button prev">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <div class="testimonials-dots"></div>
+              <button class="nav-button next">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag" data-i18n="contact.tag">Contact</span>
+            <h2 data-i18n="contact.title">Contact Us</h2>
+            <p class="section-intro" data-i18n="contact.intro">
+              Ready to transform your space? Get in touch with us today.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-info">
+              <div class="info-card">
+                <div class="info-header">
+                  <h3 data-i18n="contact.subtitle">Get in Touch</h3>
+                  <p data-i18n="contact.description">
+                    We'd love to hear from you. Send us a message and we'll
+                    respond as soon as possible.
+                  </p>
+                </div>
+
+                <div class="contact-details">
+                  <div class="contact-item">
+                    <div class="icon-wrapper">
+                      <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="item-content">
+                      <h4 data-i18n="contact.address.title">Visit Us</h4>
+                      <p>Voorbeeldstraat 123</p>
+                      <p>1234 AB Amsterdam</p>
+                    </div>
+                  </div>
+
+                  <div class="contact-item">
+                    <div class="icon-wrapper">
+                      <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="item-content">
+                      <h4 data-i18n="contact.phone.title">Call Us</h4>
+                      <p><a href="tel:+31612345678">+31 (0)6 12345678</a></p>
+                    </div>
+                  </div>
+
+                  <div class="contact-item">
+                    <div class="icon-wrapper">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="item-content">
+                      <h4 data-i18n="contact.email.title">Email Us</h4>
+                      <p>
+                        <a href="mailto:info@livingandleaving.nl"
+                          >info@livingandleaving.nl</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="social-links">
+                  <h4 data-i18n="contact.social.title">Follow Us</h4>
+                  <div class="social-icons">
+                    <a href="#" aria-label="Facebook"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a href="#" aria-label="Instagram"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a href="#" aria-label="LinkedIn"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                    <a href="#" aria-label="Pinterest"
+                      ><i class="fab fa-pinterest-p"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form-container">
+              <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                  <label for="name" data-i18n="contact.form.name">Name</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="email" data-i18n="contact.form.email"
+                    >Email</label
+                  >
+                  <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="phone" data-i18n="contact.form.phone"
+                    >Phone</label
+                  >
+                  <input type="tel" id="phone" name="phone" />
+                </div>
+
+                <div class="form-group">
+                  <label for="subject" data-i18n="contact.form.subject"
+                    >Subject</label
+                  >
+                  <select id="subject" name="subject" required>
+                    <option value="" data-i18n="contact.form.select">
+                      Select a subject
+                    </option>
+                    <option
+                      value="verkoopstyling"
+                      data-i18n="contact.form.options.staging"
+                    >
+                      Home Staging
+                    </option>
+                    <option
+                      value="meubelverhuur"
+                      data-i18n="contact.form.options.furniture"
+                    >
+                      Furniture Rental
+                    </option>
+                    <option
+                      value="interieuradvies"
+                      data-i18n="contact.form.options.interior"
+                    >
+                      Interior Design
+                    </option>
+                    <option
+                      value="other"
+                      data-i18n="contact.form.options.other"
+                    >
+                      Other
+                    </option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message" data-i18n="contact.form.message"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="button primary"
+                  data-i18n="contact.form.submit"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <div class="footer-content">
-        <div class="footer-section">
-          <h4>LivingLeaving</h4>
-          <p>&copy; 2008-2024 LivingLeaving</p>
-          <p>KvK: 12345678</p>
-          <p>BTW: NL123456789B01</p>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section brand-section">
+            <img
+              src="images/logo.svg"
+              alt="Living and Leaving Logo"
+              class="footer-logo"
+            />
+            <p class="brand-description" data-i18n="footer.description">
+              Transforming spaces with passion and expertise since 2008. Your
+              trusted partner in interior design and home staging.
+            </p>
+            <div class="social-icons">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#blog">Blog</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Stay Updated</h4>
+            <p>
+              Subscribe to our newsletter for the latest updates and inspiration
+            </p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
         </div>
-        <div class="footer-section">
-          <h4>Links</h4>
-          <ul>
-            <li><a href="#living-info">Living Info</a></li>
-            <li><a href="#leaving-styling">Leaving Styling</a></li>
-            <li><a href="#voor-makelaars">Voor Makelaars</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h4>Contact</h4>
-          <p>info@livingleaving.nl</p>
-          <p>+31 (0)6 12345678</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>
-          <a href="#">Algemene Voorwaarden</a> | <a href="#">Privacy Policy</a>
-        </p>
       </div>
     </footer>
+
+    <script src="js/language.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/testimonials.js"></script>
+    <button id="scrollToTop" class="scroll-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <div class="page-loader">
+      <div class="loader-content">
+        <div class="loader-spinner"></div>
+        <p>Loading...</p>
+      </div>
+    </div>
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-content">
+        <p>
+          We use cookies to enhance your experience. By continuing to visit this
+          site you agree to our use of cookies.
+        </p>
+        <div class="cookie-buttons">
+          <button class="button secondary" id="cookieAccept">Accept</button>
+          <a href="#" class="button text">Learn more</a>
+        </div>
+      </div>
+    </div>
+    <script src="js/scroll.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/cookies.js"></script>
   </body>
 </html>
