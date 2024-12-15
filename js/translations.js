@@ -11,7 +11,7 @@ const translations = {
       text: "New: Book a free consultation for your interior design project",
     },
     hero: {
-      title: "Living and Leaving:",
+      title: "LeavingLiving:",
       subtitle: "Transforming Spaces",
       description:
         "Creating beautiful interiors that tell your story and stage homes that sell",
@@ -22,21 +22,20 @@ const translations = {
       features: {
         staging: "Professional Staging",
         interior: "Interior Design",
-        furniture: "Furniture Rental",
       },
     },
     about: {
       tag: "About Us",
       title: "Transforming Spaces with Passion and Expertise",
       intro:
-        "At Living and Leaving, we believe every space has a story to tell. With our expertise in interior design and home staging, we help bring these stories to life.",
+        "At LeavingLiving, we believe every space has a story to tell. With our expertise in interior design and home staging, we help bring these stories to life.",
       features: {
         experience: {
-          title: "15+ Years Experience",
+          title: "14+ Years Experience",
           text: "Proven track record in transforming spaces across Netherlands",
         },
         projects: {
-          title: "500+ Projects",
+          title: "4000+ Projects",
           text: "Successfully completed interior and staging projects",
         },
         satisfaction: {
@@ -53,7 +52,7 @@ const translations = {
       tag: "Our Services",
       title: "Transform Your Space",
       intro:
-        "We offer comprehensive solutions for both living spaces and properties for sale, ensuring each space reaches its full potential.",
+        "We offer professional solutions for both interior design and home staging, ensuring each space reaches its full potential.",
       verkoopstyling: {
         title: "Home Staging",
         description:
@@ -67,21 +66,6 @@ const translations = {
         cta: {
           primary: "Get Started",
           secondary: "View Projects",
-        },
-      },
-      meubelverhuur: {
-        title: "Furniture Rental",
-        description:
-          "Quality furniture rental solutions for staging and temporary needs",
-        features: [
-          "Curated furniture selection",
-          "Flexible rental periods",
-          "Delivery and installation",
-          "Complete room packages",
-        ],
-        cta: {
-          primary: "Rent Now",
-          secondary: "View Catalog",
         },
       },
       interieuradvies: {
@@ -124,19 +108,6 @@ const translations = {
     },
     footer: {
       quickLinks: "Quick Links",
-      newsletter: {
-        title: "Contact & Subscribe",
-        text: "Stay updated with our latest projects and tips",
-        placeholder: "Your email address",
-        button: "Subscribe",
-      },
-      followUs: "Follow Us",
-      copyright: "© 2024 Living and Leaving. All rights reserved.",
-      legal: {
-        privacy: "Privacy Policy",
-        terms: "Terms of Service",
-        cookies: "Cookie Policy",
-      },
     },
   },
   nl: {
@@ -151,7 +122,7 @@ const translations = {
       text: "Nieuw: Boek een gratis consult voor uw interieurontwerp project",
     },
     hero: {
-      title: "Living and Leaving:",
+      title: "LeavingLiving:",
       subtitle: "Ruimtes Transformeren",
       description:
         "Creëren van prachtige interieurs die uw verhaal vertellen en huizen die verkopen",
@@ -162,21 +133,20 @@ const translations = {
       features: {
         staging: "Professionele Styling",
         interior: "Interieurontwerp",
-        furniture: "Meubelverhuur",
       },
     },
     about: {
       tag: "Over Ons",
       title: "Ruimtes Transformeren met Passie en Expertise",
       intro:
-        "Bij Living and Leaving geloven we dat elke ruimte een verhaal te vertellen heeft. Met onze expertise in interieurontwerp en verkoopstyling helpen we deze verhalen tot leven te brengen.",
+        "Bij LeavingLiving geloven we dat elke ruimte een verhaal te vertellen heeft. Met onze expertise in interieurontwerp en verkoopstyling helpen we deze verhalen tot leven te brengen.",
       features: {
         experience: {
-          title: "15+ Jaar Ervaring",
+          title: "14+ Jaar Ervaring",
           text: "Bewezen staat van dienst in het transformeren van ruimtes in Nederland",
         },
         projects: {
-          title: "500+ Projecten",
+          title: "4000+ Projecten",
           text: "Succesvol afgeronde interieur- en stylingprojecten",
         },
         satisfaction: {
@@ -193,7 +163,7 @@ const translations = {
       tag: "Onze Diensten",
       title: "Transformeer Uw Ruimte",
       intro:
-        "Wij bieden complete oplossingen voor zowel woonruimtes als verkoopobjecten, waarbij we ervoor zorgen dat elke ruimte zijn volledige potentieel bereikt.",
+        "Wij bieden professionele oplossingen voor zowel interieurontwerp als verkoopstyling, waarbij we ervoor zorgen dat elke ruimte zijn volledige potentieel bereikt.",
       verkoopstyling: {
         title: "Verkoopstyling",
         description:
@@ -207,21 +177,6 @@ const translations = {
         cta: {
           primary: "Start Nu",
           secondary: "Bekijk Projecten",
-        },
-      },
-      meubelverhuur: {
-        title: "Meubelverhuur",
-        description:
-          "Kwalitatieve meubelverhuuroplosssingen voor styling en tijdelijke behoeften",
-        features: [
-          "Gecureerde meubelselectie",
-          "Flexibele verhuurperiodes",
-          "Levering en installatie",
-          "Complete kamerpakketten",
-        ],
-        cta: {
-          primary: "Huur Nu",
-          secondary: "Bekijk Catalogus",
         },
       },
       interieuradvies: {
@@ -263,19 +218,6 @@ const translations = {
     },
     footer: {
       quickLinks: "Snelle Links",
-      newsletter: {
-        title: "Contact & Inschrijven",
-        text: "Blijf op de hoogte van onze laatste projecten en tips",
-        placeholder: "Uw e-mailadres",
-        button: "Inschrijven",
-      },
-      followUs: "Volg Ons",
-      copyright: "© 2024 Living and Leaving. Alle rechten voorbehouden.",
-      legal: {
-        privacy: "Privacybeleid",
-        terms: "Algemene Voorwaarden",
-        cookies: "Cookiebeleid",
-      },
     },
   },
 };
