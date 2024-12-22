@@ -25,17 +25,11 @@
         <div class="nav-container">
           <div class="logo">
             <a href="#home">
-              <img src="images/logo.png" alt="LeavingLiving Logo" />
+              <img src="images/logo_nav.svg" alt="LeavingLiving Logo" />
             </a>
           </div>
 
           <div class="nav-right">
-            <div class="language-switcher-container">
-              <select id="language-switcher" class="language-switcher">
-                <option value="nl">NL</option>
-                <option value="en">EN</option>
-              </select>
-            </div>
             <ul class="nav-links">
               <li><a href="#home" data-i18n="nav.home">Home</a></li>
               <li class="dropdown">
@@ -78,7 +72,7 @@
         <div class="hero-background">
           <style>
             .hero-background {
-              background-image: url("images/hero-bg.jpg");
+              background-image: url("images/4a.JPG");
             }
           </style>
         </div>
@@ -186,15 +180,12 @@
               <div class="image-stack">
                 <div class="image-wrapper main-image">
                   <img
-                    src="images/about-main.jpg"
+                    src="Images/1.jpg"
                     alt="Interior design project showcase"
                   />
                 </div>
                 <div class="image-wrapper overlay-image">
-                  <img
-                    src="images/about-overlay.jpg"
-                    alt="Home staging transformation"
-                  />
+                  <img src="images/1a.jpg" alt="Home staging transformation" />
                 </div>
               </div>
             </div>
@@ -343,20 +334,79 @@
           </div>
 
           <div class="portfolio-grid">
+            <!-- Interior Design Before/After -->
             <div class="portfolio-item" data-category="interior">
               <div class="portfolio-image">
-                <img
-                  src="images/portfolio/interior-1.jpg"
-                  alt="Modern Living Room Design"
-                />
+                <div class="image-comparison">
+                  <div class="before">
+                    <img src="images/2-1.jpg" alt="Interior Design - Before" />
+                    <span class="label">Before</span>
+                  </div>
+                  <div class="after">
+                    <img src="images/2a-1.jpg" alt="Interior Design - After" />
+                    <span class="label">After</span>
+                  </div>
+                </div>
               </div>
             </div>
+
+            <!-- Professional Staging Before/After -->
             <div class="portfolio-item" data-category="staging">
               <div class="portfolio-image">
-                <img
-                  src="images/portfolio/staging-1.jpg"
-                  alt="Home Staging Project"
-                />
+                <div class="image-comparison">
+                  <div class="before">
+                    <img
+                      src="images/3.JPG"
+                      alt="Professional Staging - Before"
+                    />
+                    <span class="label">Before</span>
+                  </div>
+                  <div class="after">
+                    <img
+                      src="images/2a-1.jpg"
+                      alt="Professional Staging - After"
+                    />
+                    <span class="label">After</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interior Design Before/After 2 -->
+            <div class="portfolio-item" data-category="interior">
+              <div class="portfolio-image">
+                <div class="image-comparison">
+                  <div class="before">
+                    <img src="images/4a.JPG" alt="Interior Design - Before" />
+                    <span class="label">Before</span>
+                  </div>
+                  <div class="after">
+                    <img src="images/4.JPG" alt="Interior Design - After" />
+                    <span class="label">After</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Professional Staging Before/After 2 -->
+            <div class="portfolio-item" data-category="staging">
+              <div class="portfolio-image">
+                <div class="image-comparison">
+                  <div class="before">
+                    <img
+                      src="images/1a-1.jpg"
+                      alt="Professional Staging - Before"
+                    />
+                    <span class="label">Before</span>
+                  </div>
+                  <div class="after">
+                    <img
+                      src="images/1a.jpg"
+                      alt="Professional Staging - After"
+                    />
+                    <span class="label">After</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -661,7 +711,7 @@
           </div>
 
           <div class="footer-section contact-section">
-            <h4 data-i18n="footer.contact.title">Contact Us</h4>
+            <h4 class="contact-title">Contact Us</h4>
             <div class="contact-info">
               <p>
                 <i class="fas fa-map-marker-alt"></i> Voorbeeldstraat 123, 1234
@@ -685,7 +735,15 @@
               <span class="separator">|</span>
               <a href="#" data-i18n="footer.legal.terms">Terms of Service</a>
               <span class="separator">|</span>
-              <a href="#" data-i18n="footer.legal.cookies">Cookie Policy</a>
+              <span class="credits"
+                >Made with <i class="fas fa-heart"></i> by
+                <a
+                  href="https://pickypixels.studio"
+                  target="_blank"
+                  rel="noopener"
+                  >Picky Pixels Studio</a
+                ></span
+              >
             </div>
           </div>
         </div>
@@ -695,30 +753,7 @@
     <script src="js/language.js"></script>
     <script src="js/portfolio.js"></script>
     <script src="js/testimonials.js"></script>
-    <button id="scrollToTop" class="scroll-to-top">
-      <i class="fas fa-arrow-up"></i>
-    </button>
-    <div class="page-loader">
-      <div class="loader-content">
-        <div class="loader-spinner"></div>
-        <p>Loading...</p>
-      </div>
-    </div>
-    <div class="cookie-banner" id="cookieBanner">
-      <div class="cookie-content">
-        <p>
-          We use cookies to enhance your experience. By continuing to visit this
-          site you agree to our use of cookies.
-        </p>
-        <div class="cookie-buttons">
-          <button class="button secondary" id="cookieAccept">Accept</button>
-          <a href="#" class="button text">Learn more</a>
-        </div>
-      </div>
-    </div>
-    <script src="js/scroll.js"></script>
     <script src="js/animations.js"></script>
-    <script src="js/loader.js"></script>
-    <script src="js/cookies.js"></script>
+    <script src="js/contact.js"></script>
   </body>
 </html>

@@ -1,0 +1,24 @@
+/* Header Styles */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--white);
+  transition: all 0.3s ease;
+}
+
+.sticky-header.scrolled {
+  transform: translateY(-45px);
+}
+
+.announcement-bar {
+  background: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+}
+
+/* ... rest of header styles ... */

@@ -1,0 +1,20 @@
+/* Buttons */
+.button,
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover,
+.cta-button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* ... rest of button styles ... */
