@@ -10,27 +10,38 @@
 }
 
 .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 20px;
+  background-color: transparent;
   max-width: var(--container-width);
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
   width: 100%;
 }
 
-.brand-section {
-  max-width: 450px;
+.footer-section {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.footer-section.brand-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-section.links-section,
+.footer-section.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .footer-logo {
-  height: 100px;
-  width: auto;
-  object-fit: contain;
+  max-width: 150px;
+  height: auto;
   margin-bottom: 1.5rem;
-  background-color: var(--text-color);
-  border-radius: 8px;
 }
 
 .brand-description {
@@ -46,6 +57,8 @@
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
   font-family: "Montserrat", sans-serif;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .footer-links {
@@ -82,24 +95,26 @@
 
 /* Contact Us heading */
 .footer h4.contact-title {
-  color: var(--white);
+  color: var(--primary-color);
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
+  font-weight: 600;
 }
 
 /* Contact text and links */
 .contact-info p,
 .contact-info a {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
   display: block;
   text-decoration: none;
   transition: color 0.3s ease;
+  font-size: 1.1rem;
 }
 
 .contact-info a:hover {
-  color: var(--white);
+  color: var(--primary-color);
 }
 
 /* Contact icons */
@@ -108,6 +123,12 @@
   margin-right: 0.75rem;
   width: 20px;
   text-align: center;
+}
+
+/* Add a subtle background to the contact section for better contrast */
+.footer-section.contact-section {
+  background-color: transparent;
+  padding: 0;
 }
 
 .footer-bottom {
@@ -204,10 +225,12 @@
   }
 
   .footer-content {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    text-align: center;
-    padding: 3rem 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
   }
 
   .footer-bottom-content {
