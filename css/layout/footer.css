@@ -1,6 +1,6 @@
 /* Footer Styles */
 .footer {
-  background-color: var(--text-color);
+  background-color: #a9664a;
   color: var(--white);
   position: relative;
   z-index: 1;
