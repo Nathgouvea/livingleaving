@@ -21,10 +21,3 @@
 @import "sections/portfolio.css";
 @import "sections/testimonials.css";
 @import "sections/contact.css";
-
-.hero-background {
-  background-image: url("Images/4a.JPG");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
