@@ -153,6 +153,35 @@
   gap: 1.5rem;
 }
 
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .contact-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .form-group {
+    flex: 1;
+    min-width: 45%; /* Adjust width as needed */
+    margin-right: 10px;
+  }
+
+  .form-group:nth-child(3) {
+    /* Ensure phone is on a new line */
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+
+  .form-group:last-child {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
   .contact-grid {
