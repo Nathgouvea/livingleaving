@@ -27,7 +27,7 @@
 .section-header .section-tag {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: var(--bg-color);
+  background-color: var(--primary-color);
   color: white;
   font-weight: 500;
   border-radius: 4px;
@@ -79,14 +79,14 @@
 }
 
 .service-icon {
-  background: var(--bg-color);
+  background: var(--primary-color);
   padding: 2rem;
   text-align: center;
 }
 
 .service-icon i {
   font-size: 2.5rem;
-  color: var(--primary-color);
+  color: white;
 }
 
 .service-content {
@@ -139,7 +139,7 @@
 .service-cta .button.primary {
   width: 100%;
   padding: 1rem 2rem;
-  background-color: var(--primary-color);
+  background-color: var(--bg-color);
   color: var(--white);
   border: none;
   border-radius: 4px;

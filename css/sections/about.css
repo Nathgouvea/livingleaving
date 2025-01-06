@@ -117,7 +117,7 @@
 
 .feature-item i {
   font-size: 2rem;
-  color: var(--primary-color);
+  color: white;
   background-color: var(--bg-color);
   padding: 1rem;
   border-radius: 12px;

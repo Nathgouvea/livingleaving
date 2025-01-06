@@ -39,8 +39,7 @@
 }
 
 .footer-logo {
-  max-width: 150px;
-  height: auto;
+  height: 100px;
   margin-bottom: 1.5rem;
 }
 
@@ -95,7 +94,7 @@
 
 /* Contact Us heading */
 .footer h4.contact-title {
-  color: var(--primary-color);
+  color: white;
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
   font-weight: 600;
@@ -127,8 +126,8 @@
 
 /* Add a subtle background to the contact section for better contrast */
 .footer-section.contact-section {
-  background-color: transparent;
   padding: 0;
+  background-color: #a9664a;
 }
 
 .footer-bottom {
@@ -252,4 +251,8 @@
     display: block;
     margin-top: 0.5rem;
   }
+}
+
+.footer-section.contact-section::before {
+  content: none; /* Removes the pseudo-element */
 }
