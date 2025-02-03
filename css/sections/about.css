@@ -1,7 +1,11 @@
 /* About Section Styles */
 .about-section {
-  padding: var(--section-spacing) 0;
-  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f9f9f9;
   position: relative;
   overflow: hidden;
   margin: 4rem 0;
@@ -17,8 +21,9 @@
 }
 
 .about-content {
+  max-width: 800px;
+  margin-bottom: 40px;
   padding-right: 2rem;
-  max-width: 600px;
 }
 
 .section-tag {
@@ -32,11 +37,19 @@
 }
 
 .about-content h2 {
-  font-size: 2.5rem;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 20px;
   color: var(--text-color);
   line-height: 1.2;
-  margin-bottom: 1.5rem;
   font-family: "Montserrat", sans-serif;
+}
+
+.about-content p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: var(--accent-color);
 }
 
 .about-intro {
@@ -97,13 +110,18 @@
 }
 
 .about-features {
-  display: grid;
-  gap: 2.5rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   margin-bottom: 3rem;
   margin-top: 3rem;
 }
 
 .feature-item {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+  text-align: center;
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
