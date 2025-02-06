@@ -17,9 +17,9 @@
   <body>
     <header class="sticky-header">
       <div class="announcement-bar">
-        <p data-i18n="announcement.text">
+        <div class="marquee">
           Check Felt so Fair voor unieke, handgemaakte woonaccessoires
-        </p>
+        </div>
       </div>
       <nav class="main-nav">
         <div class="nav-container">
@@ -32,9 +32,9 @@
           <div class="nav-right">
             <ul class="nav-links">
               <li><a href="#home" data-i18n="nav.home">Home</a></li>
-              <li class="dropdown">
+              <li>
                 <a href="#services" data-i18n="nav.services"
-                  >Diensten <i class="fas fa-chevron-down"></i
+                  >Diensten</i
                 ></a>
               </li>
             </ul>
@@ -59,26 +59,14 @@
     </header>
 
     <main>
-      <section id="home" class="hero">
-        <div class="hero-background">
-          <style>
-            .hero-background {
-              background-image: url("Images/boho-living-room.jpg");
-            }
-          </style>
-        </div>
+      <section id="home" class="hero" style="background-image: url('Images/boho-living-room.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="hero-content">
           <div class="hero-text">
             <h1>
-              <span data-i18n="hero.title"
-                >Ruimtes transformeren met passie en expertise!</span
-              >
+              <span data-i18n="hero.title">Ruimtes transformeren met passie en expertise!</span>
             </h1>
             <p class="hero-subtitle" data-i18n="hero.description">
-              Elke woning heeft een verhaal. Mijn doel is om dat verhaal perfect
-              te vertalen, zodat alle sterke kanten van jouw huis op Funda
-              optimaal uitgelicht worden. Verkopen met meer waarde? Ik help je
-              om de beste eerste indruk achter te laten!
+              Elke woning heeft een verhaal. Mijn doel is om dat verhaal perfect te vertalen, zodat alle sterke kanten van jouw huis op Funda optimaal uitgelicht worden. Verkopen met meer waarde? Ik help je om de beste eerste indruk achter te laten!
             </p>
           </div>
         </div>
@@ -121,13 +109,6 @@
                     </p>
                   </div>
                 </div>
-                <div class="feature-item">
-                  <i class="fas fa-home"></i>
-                  <div class="feature-text">
-                    <h4>4000+ Projecten</h4>
-                    <p>Succesvol afgeronde interieur- en stagingprojecten</p>
-                  </div>
-                </div>
               </div>
 
               <div class="about-cta">
@@ -154,11 +135,64 @@
         <div class="round-text">
           <p>
             In deze markt geldt: je krijgt geen tweede kans voor een eerste
-            indruk. Samen zorgen we ervoor dat jouw woning dé woning wordt waar
+            indruk. <br> Samen zorgen we ervoor dat jouw woning dé woning wordt waar
             iedereen op zit te wachten.
           </p>
         </div>
       </section>
+
+      <!-- Section 1 -->
+      <div class="section-wrapper" style="background-color: #f0f0f0;">
+        <div class="container">
+          <div class="section-content" style="display: flex; align-items: center; padding: 20px;">
+            <div class="section-image" style="flex: 1;">
+              <img src="Images/pexels-photo-4906241.jpeg" alt="Gezellige woning met open haard" style="width: 100%; height: auto;">
+            </div>
+            <div class="section-text" style="flex: 1; padding: 20px;">
+              <p class="heading" style="font-weight: bold; font-size: 24px;">Is dit herkenbaar?</p>
+              <p class="subheading" style="font-weight: normal; font-size: 18px;">Je gaat je woning verkopen</p>
+              <ul class="bullets" style="list-style-type: none; padding: 0;">
+                <li style="margin-bottom: 10px;"><span style="color: orange;">•</span> en wilt graag een maximale opbrengst behalen, maar hoe realiseer je dat?</li>
+                <li style="margin-bottom: 10px;"><span style="color: orange;">•</span> maar je hebt geen idee waar je moet beginnen met de presentatie?</li>
+                <li style="margin-bottom: 10px;"><span style="color: orange;">•</span> maar wat zorgt ervoor dat de juiste doelgroep zich aangesproken voelt?</li>
+                <li><span style="color: orange;">•</span> maar je hebt geen idee hoe je je woning zo mooi mogelijk op Funda presenteert?</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="section-wrapper" style="background-color: #f8f4ed;">
+        <div class="container">
+          <div class="section-content" style="display: flex; align-items: center; padding: 20px;">
+            <div class="section-text" style="flex: 1; padding: 20px;">
+              <p class="heading" style="font-weight: bold; font-size: 24px; background-color: yellow; display: inline-block; padding: 5px;">Werk met Mij!</p>
+              <p class="subheading" style="font-weight: normal; font-size: 18px;">Je gaat je woning verkopen</p>
+              <ul class="bullets" style="list-style-type: none; padding: 0;">
+                <li style="margin-bottom: 10px;"><span style="color: orange;">•</span> en ik kijk waar nog extra winst te behalen valt!</li>
+                <li style="margin-bottom: 10px;"><span style="color: orange;">•</span> en ik geef je gedetailleerd advies voor in- en exterieur van je woning!</li>
+                <li style="margin-bottom: 10px;"><span style="color: orange;">•</span> en ik houd rekening met de doelgroep en geef tips om je doelgroep te vergroten!</li>
+                <li><span style="color: orange;">•</span> en ik help je om je woning zo aantrekkelijk mogelijk te presenteren op Funda!</li>
+              </ul>
+
+            </div>
+            <div class="section-image" style="flex: 1;">
+              <img src="Images/pexels-photo-6667200.webp" alt="Gezellige woonkamer met vader en zoon" style="width: 100%; height: auto;">
+            </div>
+          </div>
+        </div>
+
+                <!-- New Round Text -->
+                <div class="round-text">
+                  <p>
+                    mijn sterke punten: <br>
+                    expertise! meer dan 4000 woningen gestyled <br>
+                    creatie-kracht! veel bereiken met weinig <br>
+                    snel! morgen een afspraak?
+                  </p>
+                </div>
+      </div>
 
       <section id="services" class="section services-section">
         <div class="container">
@@ -490,8 +524,8 @@
               class="footer-logo"
             />
             <p class="brand-description" data-i18n="footer.description">
-              Ruimtes transformeren met passie en expertise sinds 2008. Uw
-              vertrouwde partner in interieurontwerp en woningpresentatie.
+              Ik transformeer ruimtes met passie
+en expertise sinds 2010.
             </p>
           </div>
 

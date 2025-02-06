@@ -10,7 +10,7 @@
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 var(--container-padding);
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .logo {
@@ -41,6 +41,7 @@
 .nav-right {
   display: flex;
   align-items: center;
+  padding-top: 20px;
   gap: 2rem;
 }
 
@@ -84,47 +85,6 @@
   width: 100%;
 }
 
-/* Dropdown Styles */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: -1rem;
-  background: var(--white);
-  min-width: 200px;
-  padding: 1rem 0;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(67, 56, 35, 0.1);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-}
-
-.dropdown:hover .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.dropdown-menu li {
-  list-style: none;
-}
-
-.dropdown-menu a {
-  padding: 0.5rem 1.5rem;
-  display: block;
-  color: var(--text-color);
-  transition: background-color 0.3s ease;
-}
-
-.dropdown-menu a:hover {
-  background-color: var(--bg-color);
-}
-
 /* CTA Button in Nav */
 .nav-cta .cta-button {
   padding: 0.75rem 1.5rem;
@@ -163,10 +123,6 @@
 @media (max-width: 1024px) {
   .nav-links {
     gap: 1.5rem;
-  }
-
-  .nav-cta .cta-button {
-    padding: 0.6rem 1.2rem;
   }
 }
 
