@@ -18,6 +18,7 @@
 /* Sections */
 @import "sections/hero.css";
 @import "sections/about.css";
+@import "sections/features.css";
 @import "sections/services.css";
 @import "sections/testimonials.css";
 @import "sections/contact.css";
