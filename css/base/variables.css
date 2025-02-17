@@ -1,15 +1,18 @@
 :root {
   /* Colors */
   --primary-color: #d18c32;
-  --secondary-color: #e07b53;
+  --secondary-color: #6b8339;
   --bg-color: #a9664a;
   --accent-color: #807a6b;
   --text-color: #4d4940;
   --white: #ffffff;
+  --green-light: rgba(107, 131, 57, 0.1);
+  --green-medium: rgba(107, 131, 57, 0.5);
+  --orange-light: rgba(209, 140, 50, 0.1);
+  --orange-medium: rgba(209, 140, 50, 0.5);
 
   /* Typography */
   --font-primary: "Montserrat", sans-serif;
-  --font-secondary: "Roboto", sans-serif;
   --font-size-base: 16px;
   --font-size-h1: 3.5rem;
   --font-size-h2: 2.5rem;

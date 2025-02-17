@@ -3,6 +3,7 @@
   background-color: var(--white);
   position: relative;
   overflow: hidden;
+  font-family: var(--font-primary);
 }
 
 .about-section .container {
@@ -39,6 +40,7 @@
 
 .about-content {
   max-width: 600px;
+  font-family: var(--font-primary);
 }
 
 .about-content h2 {
@@ -46,6 +48,8 @@
   color: var(--text-color);
   margin-bottom: var(--gap-lg);
   line-height: 1.2;
+  font-family: var(--font-primary);
+  font-weight: 700;
 }
 
 .about-content h2::after {
@@ -87,6 +91,8 @@
   font-size: var(--font-size-h3);
   color: var(--text-color);
   margin-bottom: 0.75rem;
+  font-family: var(--font-primary);
+  font-weight: 600;
 }
 
 .founder-title {
@@ -94,6 +100,7 @@
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: var(--gap-md);
+  font-family: var(--font-primary);
 }
 
 .about-intro {
@@ -101,6 +108,8 @@
   line-height: 1.8;
   margin-bottom: var(--gap-md);
   font-size: 1.2rem;
+  font-family: var(--font-primary);
+  font-weight: 400;
 }
 
 .about-cta {
@@ -230,6 +239,8 @@
   transform: translateY(0);
   transition: transform var(--transition-normal),
     box-shadow var(--transition-normal);
+  font-family: var(--font-primary);
+  font-weight: 500;
 }
 
 .round-text:hover {

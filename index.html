@@ -6,7 +6,7 @@
     <title>LeavingLiving - Ruimtes Transformeren voor Nieuwe Beginnen</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -30,16 +30,13 @@
           </div>
 
           <div class="nav-right">
-            <ul class="nav-links">
+            <!-- Desktop Navigation -->
+            <ul class="nav-links desktop-nav">
               <li><a href="#home" data-i18n="nav.home">Home</a></li>
-              <li>
-                <a href="#services" data-i18n="nav.services"
-                  >Diensten</i
-                ></a>
-              </li>
+              <li><a href="#services" data-i18n="nav.services">Diensten</a></li>
             </ul>
 
-            <div class="nav-cta">
+            <div class="nav-cta desktop-nav">
               <a
                 href="#contact"
                 class="cta-button"
@@ -48,6 +45,7 @@
               >
             </div>
 
+            <!-- Hamburger Button -->
             <button class="mobile-menu" aria-label="Menu">
               <span></span>
               <span></span>
@@ -58,15 +56,42 @@
       </nav>
     </header>
 
+    <!-- Mobile Menu (outside header) -->
+    <div class="mobile-menu-container">
+      <ul class="mobile-nav-links">
+        <li><a href="#home" data-i18n="nav.home">Home</a></li>
+        <li><a href="#services" data-i18n="nav.services">Diensten</a></li>
+        <li class="mobile-cta">
+          <a href="#contact" class="cta-button" data-i18n="about.cta.primary"
+            >Werk met mij</a
+          >
+        </li>
+      </ul>
+    </div>
+
     <main>
-      <section id="home" class="hero" style="background-image: url('Images/boho-living-room.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <section
+        id="home"
+        class="hero"
+        style="
+          background-image: url('Images/boho-living-room.jpg');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        "
+      >
         <div class="hero-content">
           <div class="hero-text">
             <h1>
-              <span data-i18n="hero.title">Ruimtes transformeren met passie en expertise!</span>
+              <span data-i18n="hero.title"
+                >Ruimtes transformeren met passie en expertise!</span
+              >
             </h1>
             <p class="hero-subtitle" data-i18n="hero.description">
-              Elke woning heeft een verhaal. Mijn doel is om dat verhaal perfect te vertalen, zodat alle sterke kanten van jouw huis op Funda optimaal uitgelicht worden. Verkopen met meer waarde? Ik help je om de beste eerste indruk achter te laten!
+              Elke woning heeft een verhaal. Mijn doel is om dat verhaal perfect
+              te vertalen, zodat alle sterke kanten van jouw huis op Funda
+              optimaal uitgelicht worden. Verkopen met meer waarde? Ik help je
+              om de beste eerste indruk achter te laten!
             </p>
           </div>
         </div>
@@ -97,7 +122,9 @@
               </p>
               <div class="about-cta">
                 <a href="#contact" class="button primary">Werk met mij</a>
-                <a href="#portfolio" class="button secondary">Bekijk Onze Projecten</a>
+                <a href="#portfolio" class="button secondary"
+                  >Bekijk Onze Projecten</a
+                >
               </div>
             </div>
 
@@ -117,8 +144,9 @@
         <div class="round-text">
           <p>
             In deze markt geldt: je krijgt geen tweede kans voor een eerste
-            indruk. <br> Samen zorgen we ervoor dat jouw woning dé woning wordt waar
-            iedereen op zit te wachten.
+            indruk. <br />
+            Samen zorgen we ervoor dat jouw woning dé woning wordt waar iedereen
+            op zit te wachten.
           </p>
         </div>
       </section>
@@ -130,14 +158,30 @@
               <h2 class="highlight-box"><span>Is dit herkenbaar?</span></h2>
               <h3 class="feature-subtitle">Je gaat je woning verkopen</h3>
               <ul class="feature-list">
-                <li class="feature-item">en wilt graag een maximale opbrengst behalen, maar hoe realiseer je dat?</li>
-                <li class="feature-item">maar je hebt geen idee waar je moet beginnen met de presentatie?</li>
-                <li class="feature-item">maar wat zorgt ervoor dat de juiste doelgroep zich aangesproken voelt?</li>
-                <li class="feature-item">maar je hebt geen idee hoe je je woning zo mooi mogelijk op Funda presenteert?</li>
+                <li class="feature-item">
+                  en wilt graag een maximale opbrengst behalen, maar hoe
+                  realiseer je dat?
+                </li>
+                <li class="feature-item">
+                  maar je hebt geen idee waar je moet beginnen met de
+                  presentatie?
+                </li>
+                <li class="feature-item">
+                  maar wat zorgt ervoor dat de juiste doelgroep zich
+                  aangesproken voelt?
+                </li>
+                <li class="feature-item">
+                  maar je hebt geen idee hoe je je woning zo mooi mogelijk op
+                  Funda presenteert?
+                </li>
               </ul>
             </div>
             <div class="feature-image-wrapper">
-              <img src="Images/pexels-photo-4906241.jpeg" alt="Gezellige woning met open haard" class="feature-image">
+              <img
+                src="Images/pexels-photo-4906241.jpeg"
+                alt="Gezellige woning met open haard"
+                class="feature-image"
+              />
             </div>
           </div>
 
@@ -146,37 +190,52 @@
               <h2 class="highlight-box"><span>Werk met Mij!</span></h2>
               <h3 class="feature-subtitle">Je gaat je woning verkopen</h3>
               <ul class="feature-list">
-                <li class="feature-item">en ik kijk waar nog extra winst te behalen valt!</li>
-                <li class="feature-item">en ik geef je gedetailleerd advies voor in- en exterieur van je woning!</li>
-                <li class="feature-item">en ik houd rekening met de doelgroep en geef tips om je doelgroep te vergroten!</li>
-                <li class="feature-item">en ik help je om je woning zo aantrekkelijk mogelijk te presenteren op Funda!</li>
+                <li class="feature-item">
+                  en ik kijk waar nog extra winst te behalen valt!
+                </li>
+                <li class="feature-item">
+                  en ik geef je gedetailleerd advies voor in- en exterieur van
+                  je woning!
+                </li>
+                <li class="feature-item">
+                  en ik houd rekening met de doelgroep en geef tips om je
+                  doelgroep te vergroten!
+                </li>
+                <li class="feature-item">
+                  en ik help je om je woning zo aantrekkelijk mogelijk te
+                  presenteren op Funda!
+                </li>
               </ul>
             </div>
             <div class="feature-image-wrapper">
-              <img src="Images/pexels-photo-6667200.webp" alt="Gezellige woonkamer met vader en zoon" class="feature-image">
+              <img
+                src="Images/pexels-photo-6667200.webp"
+                alt="Gezellige woonkamer met vader en zoon"
+                class="feature-image"
+              />
             </div>
           </div>
         </div>
       </section>
 
       <section id="services" class="section services-section">
+        <div class="decorative-circle"></div>
+        <div class="decorative-circle"></div>
+        <div class="decorative-circle"></div>
         <div class="container">
           <div class="section-header">
             <span class="section-tag" data-i18n="services.tag"
               >Onze Diensten</span
             >
             <h2 data-i18n="services.title">Transformeer Uw Ruimte</h2>
-            <p class="section-intro" data-i18n="services.intro">
-              Met meer dan 4000 succesvolle projecten, zijn we gespecialiseerd
-              in professionele woningpresentatie en deskundige interieurontwerp
-              diensten die ruimtes transformeren en verwachtingen overtreffen.
-            </p>
           </div>
 
           <div class="services-grid">
             <div class="service-card">
-              <div class="service-icon">
-                <i class="fas fa-home"></i>
+              <div class="service-icon-wrapper">
+                <div class="service-icon">
+                  <i class="fas fa-home"></i>
+                </div>
               </div>
               <div class="service-content">
                 <h3>Verkoopstyling</h3>
@@ -184,23 +243,6 @@
                   Deskundige woningpresentatie die de waarde van uw eigendom
                   maximaliseert en het verkoopproces versnelt
                 </p>
-                <ul class="service-features">
-                  <li>
-                    <i class="fas fa-check"></i> Uitgebreide eigendomsanalyse en
-                    strategie
-                  </li>
-                  <li>
-                    <i class="fas fa-check"></i> Professionele styling en
-                    meubelopstelling
-                  </li>
-                  <li>
-                    <i class="fas fa-check"></i> Gerichte decor selectie en
-                    verbetering
-                  </li>
-                  <li>
-                    <i class="fas fa-check"></i> Fotografie-klaar presentatie
-                  </li>
-                </ul>
                 <div class="service-cta">
                   <a href="#contact" class="button primary">Start Uw Project</a>
                 </div>
@@ -208,8 +250,10 @@
             </div>
 
             <div class="service-card">
-              <div class="service-icon">
-                <i class="fas fa-paint-brush"></i>
+              <div class="service-icon-wrapper">
+                <div class="service-icon">
+                  <i class="fas fa-paint-brush"></i>
+                </div>
               </div>
               <div class="service-content">
                 <h3>Interieuradvies</h3>
@@ -217,24 +261,7 @@
                   Persoonlijke interieurontwerp oplossingen die uw visie tot
                   leven brengen
                 </p>
-                <ul class="service-features">
-                  <li>
-                    <i class="fas fa-check"></i> Deskundige kleur- en
-                    materiaalbegeleiding
-                  </li>
-                  <li>
-                    <i class="fas fa-check"></i> Geoptimaliseerde ruimteplanning
-                    en flow
-                  </li>
-                  <li>
-                    <i class="fas fa-check"></i> Op maat gemaakte
-                    ontwerpconcepten en oplossingen
-                  </li>
-                  <li>
-                    <i class="fas fa-check"></i> Geselecteerde meubels en
-                    accessoires
-                  </li>
-                </ul>
+
                 <div class="service-cta">
                   <a href="#contact" class="button primary">Boek Consult</a>
                 </div>
@@ -286,11 +313,6 @@
                   </div>
                 </div>
                 <div class="testimonial-author">
-                  <img
-                    src="Images/testimonials/client-1.jpg"
-                    alt="Klant foto"
-                    class="author-image"
-                  />
                   <div class="author-info">
                     <h4 data-i18n="testimonials.items.0.name">Sarah Johnson</h4>
                     <p data-i18n="testimonials.items.0.location">Amsterdam</p>
@@ -317,11 +339,6 @@
                   </div>
                 </div>
                 <div class="testimonial-author">
-                  <img
-                    src="https://via.placeholder.com/60"
-                    alt="Klant foto"
-                    class="author-image"
-                  />
                   <div class="author-info">
                     <h4 data-i18n="testimonials.items.1.name">
                       Mark van der Berg
@@ -350,11 +367,6 @@
                   </div>
                 </div>
                 <div class="testimonial-author">
-                  <img
-                    src="https://via.placeholder.com/60"
-                    alt="Klant foto"
-                    class="author-image"
-                  />
                   <div class="author-info">
                     <h4 data-i18n="testimonials.items.2.name">Emma de Vries</h4>
                     <p data-i18n="testimonials.items.2.location">Utrecht</p>
@@ -427,44 +439,28 @@
             </div>
 
             <div class="contact-form-container">
-              <form class="contact-form" id="contactForm">
+              <form class="contact-form">
                 <div class="form-group">
-                  <label for="name" data-i18n="contact.form.name">Naam</label>
-                  <input type="text" id="name" name="name" required />
+                  <label>Naam</label>
+                  <input type="text" placeholder="Uw naam" />
                 </div>
-
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Uw email" />
+                  </div>
+                  <div class="form-group">
+                    <label>Telefoon</label>
+                    <input type="tel" placeholder="Uw telefoonnummer" />
+                  </div>
+                </div>
                 <div class="form-group">
-                  <label for="email" data-i18n="contact.form.email"
-                    >Email</label
-                  >
-                  <input type="email" id="email" name="email" required />
+                  <label>Bericht</label>
+                  <textarea placeholder="Uw bericht"></textarea>
                 </div>
-
-                <div class="form-group">
-                  <label for="phone" data-i18n="contact.form.phone"
-                    >Telefoon</label
-                  >
-                  <input type="tel" id="phone" name="phone" />
-                </div>
-
-                <div class="form-group">
-                  <label for="message" data-i18n="contact.form.message"
-                    >Bericht</label
-                  >
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="5"
-                    required
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  class="button primary"
-                  data-i18n="contact.form.submit"
-                >
+                <button type="submit">
                   Verstuur Bericht
+                  <i class="fas fa-arrow-right"></i>
                 </button>
               </form>
             </div>
@@ -483,8 +479,7 @@
               class="footer-logo"
             />
             <p class="brand-description" data-i18n="footer.description">
-              Ik transformeer ruimtes met passie
-en expertise sinds 2010.
+              Ik transformeer ruimtes met passie en expertise sinds 2010.
             </p>
           </div>
 
@@ -545,5 +540,6 @@ en expertise sinds 2010.
     <script src="js/testimonials.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/contact.js"></script>
+    <script src="js/mobile-menu.js"></script>
   </body>
 </html>
