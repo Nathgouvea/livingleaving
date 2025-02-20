@@ -28,7 +28,7 @@
 }
 
 .announcement-bar {
-  background: var(--primary-color);
+  background: #a9664a;
   color: var(--white);
   padding: 0.75rem 0;
   text-align: center;
