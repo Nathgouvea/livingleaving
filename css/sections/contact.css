@@ -1,5 +1,5 @@
 .contact-section {
-  padding: calc(var(--section-spacing) * 1.2) 0;
+  padding: calc(var(--section-spacing) * 1) 0;
   background: linear-gradient(
     135deg,
     var(--orange-light) 0%,
@@ -139,9 +139,14 @@
   box-shadow: 0 6px 15px rgba(107, 131, 57, 0.2);
 }
 
-.icon-wrapper i {
-  color: var(--white);
+.contact-section .icon-wrapper i {
+  color: #ffffff !important;
   font-size: 1.3rem;
+  opacity: 0.95;
+}
+
+.contact-section .contact-item:hover .icon-wrapper i {
+  opacity: 1;
 }
 
 .item-content h4 {

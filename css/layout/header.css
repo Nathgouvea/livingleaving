@@ -106,6 +106,8 @@
   display: flex;
   align-items: center;
   gap: var(--gap-lg);
+  position: relative;
+  z-index: 1000;
 }
 
 .nav-cta .cta-button {
@@ -131,17 +133,36 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 10px;
+  position: relative;
+  z-index: 1000;
 }
 
 .mobile-menu span {
   display: block;
   width: 24px;
-  height: 2px;
+  height: 2.5px;
   background-color: var(--text-color);
   margin: 6px 0;
-  transition: var(--transition-normal);
-  border-radius: var(--border-radius-sm);
+  transition: all 0.3s ease;
+  transform-origin: center;
+  border-radius: 2px;
+}
+
+.mobile-menu.active span {
+  background-color: var(--primary-color);
+}
+
+.mobile-menu.active span:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+
+.mobile-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu.active span:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
 }
 
 .mobile-menu-container {
@@ -150,18 +171,22 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: var(--white);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transform: translateX(-100%);
-  transition: transform var(--transition-normal);
-  z-index: calc(var(--z-header) - 1);
+  background: var(--white);
+  padding: 100px var(--gap-lg) var(--gap-lg);
+  box-sizing: border-box;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  display: none;
 }
 
 .mobile-menu-container.active {
-  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .mobile-nav-links {
@@ -280,25 +305,20 @@
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+  .mobile-menu {
+    display: block;
+  }
+
   .desktop-nav {
     display: none;
   }
 
-  .mobile-menu {
-    display: block;
-    z-index: 1000;
+  .sticky-header {
+    z-index: 1001;
   }
 
-  .mobile-menu.active span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-  }
-
-  .mobile-menu.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .mobile-menu.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
+  .mobile-menu-container {
+    padding-top: 120px;
   }
 
   .mobile-menu-container {
@@ -378,10 +398,6 @@
     background-color: var(--secondary-color);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(74, 88, 43, 0.2);
-  }
-
-  .sticky-header {
-    z-index: 999;
   }
 
   .logo {

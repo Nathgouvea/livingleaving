@@ -38,6 +38,7 @@
 
 .footer-logo {
   height: 100px;
+  border-radius: 10px;
   opacity: 1;
   transition: opacity 0.2s ease;
 }
@@ -76,7 +77,7 @@
 
 .footer-links {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: var(--gap-sm);
 }
 
@@ -232,7 +233,7 @@
   }
 
   .footer-logo {
-    height: 50px;
+    height: 90px;
     margin: 0 auto var(--gap-sm);
   }
 }

@@ -201,18 +201,18 @@
 
 .round-text {
   position: relative;
-  max-width: 750px;
-  margin: var(--gap-xl) auto 0;
-  padding: var(--gap-xl) var(--gap-xl);
+  max-width: 600px;
+  margin: calc(var(--section-spacing) * 0.75) auto var(--gap-md);
+  padding: var(--gap-lg) var(--gap-xl);
   background: linear-gradient(
     135deg,
     var(--secondary-light) 0%,
     var(--primary-light) 100%
   );
-  border-radius: 40px;
+  border-radius: 20px;
   text-align: center;
-  box-shadow: 0 15px 30px var(--secondary-light);
-  border: 1px solid var(--secondary-light);
+  box-shadow: 0 8px 20px rgba(74, 88, 43, 0.08);
+  border: 1px solid rgba(74, 88, 43, 0.1);
   overflow: hidden;
   transition: transform var(--transition-normal),
     box-shadow var(--transition-normal);
@@ -227,8 +227,8 @@
   height: 100%;
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.3) 0%,
-    transparent 100%
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.1) 100%
   );
 }
 
@@ -238,35 +238,35 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 3px;
+  height: 2px;
   background: linear-gradient(
     90deg,
     var(--secondary-color),
     var(--primary-color)
   );
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .round-text p {
   position: relative;
-  font-size: 1.3rem;
-  line-height: 1.6;
+  font-size: 1.15rem;
+  line-height: 1.4;
   color: var(--text-color);
-  font-weight: 600;
+  font-weight: 500;
   margin: 0;
   z-index: 2;
-  padding: 0 var(--gap-lg);
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  padding: 0 var(--gap-sm);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
 }
 
 .round-text p::before {
   content: "\201C";
   position: absolute;
-  top: -40px;
-  left: -10px;
-  font-size: 7rem;
+  top: -20px;
+  left: -5px;
+  font-size: 3.5rem;
   color: var(--secondary-color);
-  opacity: 0.2;
+  opacity: 0.15;
   font-family: serif;
   line-height: 1;
   animation: fadeIn 1s ease-out;
@@ -275,11 +275,11 @@
 .round-text p::after {
   content: "\201D";
   position: absolute;
-  bottom: -90px;
-  right: -10px;
-  font-size: 7rem;
+  bottom: -45px;
+  right: -5px;
+  font-size: 3.5rem;
   color: var(--secondary-color);
-  opacity: 0.2;
+  opacity: 0.15;
   font-family: serif;
   line-height: 1;
   animation: fadeIn 1s ease-out;
@@ -295,8 +295,8 @@
 }
 
 .round-text:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px var(--secondary-light);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(74, 88, 43, 0.12);
 }
 
 @media (max-width: 992px) {
@@ -360,27 +360,27 @@
   }
 
   .round-text {
-    max-width: 600px;
-    margin: var(--gap-lg) var(--gap-md) 0;
-    padding: var(--gap-lg) var(--gap-lg);
-    border-radius: 30px;
+    max-width: 550px;
+    margin: var(--gap-xl) var(--gap-md) var(--gap-lg);
+    padding: var(--gap-md) var(--gap-lg);
+    border-radius: 16px;
   }
 
   .round-text p {
-    font-size: 1.1rem;
-    padding: 0 var(--gap-md);
+    font-size: 1.05rem;
+    padding: 0 var(--gap-xs);
   }
 
   .round-text p::before {
-    font-size: 6rem;
-    top: -30px;
-    left: -5px;
+    font-size: 3rem;
+    top: -15px;
+    left: -4px;
   }
 
   .round-text p::after {
-    font-size: 6rem;
-    bottom: -80px;
-    right: -5px;
+    font-size: 3rem;
+    bottom: -40px;
+    right: -4px;
   }
 }
 
@@ -411,25 +411,25 @@
   }
 
   .round-text {
-    margin: var(--gap-md) var(--gap-sm) 0;
+    margin: var(--gap-lg) var(--gap-sm) var(--gap-md);
     padding: var(--gap-md) var(--gap-md);
-    border-radius: 25px;
+    border-radius: 14px;
   }
 
   .round-text p {
-    font-size: 1.1rem;
-    padding: 0 var(--gap-sm);
+    font-size: 1rem;
+    line-height: 1.35;
   }
 
   .round-text p::before {
-    font-size: 5rem;
-    top: -25px;
-    left: -5px;
+    font-size: 2.5rem;
+    top: -12px;
+    left: -3px;
   }
 
   .round-text p::after {
-    font-size: 5rem;
-    bottom: -70px;
-    right: -5px;
+    font-size: 2.5rem;
+    bottom: -35px;
+    right: -3px;
   }
 }

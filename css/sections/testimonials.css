@@ -1,5 +1,5 @@
 .testimonials-section {
-  padding: calc(var(--section-spacing) * 0.3) 0;
+  padding: calc(var(--section-spacing) * 1) 0;
   background-color: var(--white);
   font-family: var(--font-primary);
   position: relative;
@@ -281,6 +281,7 @@
 
   .testimonial-content {
     padding: var(--gap-sm);
+    margin-top: 40px;
   }
 
   .quote-text {
