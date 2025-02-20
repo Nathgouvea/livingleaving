@@ -4,6 +4,8 @@
   font-family: var(--font-primary);
   position: relative;
   overflow: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 /* Simplified, subtle gradient background */
@@ -81,7 +83,6 @@
   text-align: center;
   max-width: 650px;
   margin: 0 auto var(--gap-lg);
-  font-family: var(--font-primary);
   position: relative;
   z-index: 2;
 }
@@ -91,7 +92,6 @@
   color: var(--secondary-color);
   font-size: 0.875rem;
   margin-bottom: var(--gap-xs);
-  font-family: var(--font-primary);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -103,7 +103,6 @@
   font-size: 2.8rem;
   color: var(--text-color);
   margin-bottom: var(--gap-xs);
-  font-family: var(--font-primary);
   font-weight: 700;
   line-height: 1.1;
 }
@@ -112,7 +111,6 @@
   color: var(--accent-color);
   font-size: 1.1rem;
   line-height: 1.6;
-  font-family: var(--font-primary);
   font-weight: 400;
   max-width: 600px;
   margin: var(--gap-md) auto 0;
@@ -127,6 +125,8 @@
   z-index: 2;
   max-width: 1200px;
   padding: 0 var(--gap-lg);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .service-card {
@@ -137,12 +137,13 @@
   text-align: left;
   border: none;
   box-shadow: none;
+  width: 100%;
 }
 
 .service-icon-wrapper {
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   margin: 0 0 var(--gap-md);
   display: flex;
   align-items: center;
@@ -152,29 +153,148 @@
 .service-icon {
   width: 100px;
   height: 100px;
-  background-color: rgba(255, 255, 255, 0.95);
-  border: 2px solid var(--orange-light);
-  border-radius: var(--border-radius-lg);
+  background-color: var(--white);
+  border-radius: var(--border-radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: 2;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 5px 15px rgba(209, 140, 50, 0.1);
+  z-index: 3;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 25px rgba(209, 140, 50, 0.06);
+  border: 1px solid rgba(209, 140, 50, 0.08);
+}
+
+/* Flower petal effect */
+.service-icon::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  background: radial-gradient(
+    circle at center,
+    rgba(209, 140, 50, 0.08) 0%,
+    rgba(209, 140, 50, 0.03) 60%,
+    transparent 100%
+  );
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  animation: floatingPetal 8s infinite linear;
+  z-index: -1;
+}
+
+/* Second petal layer */
+.service-icon::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  background: radial-gradient(
+    circle at center,
+    rgba(154, 165, 101, 0.08) 0%,
+    rgba(154, 165, 101, 0.03) 60%,
+    transparent 100%
+  );
+  border-radius: 58% 42% 30% 70% / 55% 55% 45% 45%;
+  animation: floatingPetal 10s infinite linear reverse;
+  z-index: -2;
+}
+
+/* Decorative dots */
+.service-icon-wrapper::before,
+.service-icon-wrapper::after {
+  content: "";
+  position: absolute;
+  border-radius: var(--border-radius-full);
+  background: var(--primary-color);
+  opacity: 0.15;
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-icon-wrapper::before {
+  width: 8px;
+  height: 8px;
+  top: 25%;
+  right: 25%;
+  animation: floatingDot 6s infinite ease-in-out;
+}
+
+.service-icon-wrapper::after {
+  width: 6px;
+  height: 6px;
+  bottom: 30%;
+  left: 28%;
+  animation: floatingDot 7s infinite ease-in-out reverse;
 }
 
 .service-icon i {
   color: var(--primary-color);
-  font-size: 2.8rem;
+  font-size: 2.4rem;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 4;
   opacity: 0.9;
+}
+
+@keyframes floatingPetal {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes floatingDot {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(5px, -5px);
+  }
+}
+
+/* Hover effects */
+.service-card:hover .service-icon {
+  transform: translateY(-6px);
+  background: linear-gradient(
+    135deg,
+    rgba(209, 140, 50, 0.08) 0%,
+    rgba(209, 140, 50, 0.12) 100%
+  );
+  border-color: rgba(209, 140, 50, 0.15);
+}
+
+.service-card:hover .service-icon i {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.service-card:hover .service-icon::before {
+  animation-duration: 6s;
+  opacity: 0.12;
+}
+
+.service-card:hover .service-icon::after {
+  animation-duration: 8s;
+  opacity: 0.12;
+}
+
+.service-card:hover .service-icon-wrapper::before,
+.service-card:hover .service-icon-wrapper::after {
+  opacity: 0.25;
+  animation-duration: 4s;
 }
 
 .service-content h3 {
   font-size: 1.8rem;
   color: var(--text-color);
   margin-bottom: var(--gap-sm);
-  font-family: var(--font-primary);
   font-weight: 600;
   position: relative;
 }
@@ -202,8 +322,6 @@
   line-height: 1.5;
   padding: 0.5rem 0;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  background: none;
-  border-radius: 0;
 }
 
 .service-features li::before {
@@ -217,33 +335,43 @@
   flex-shrink: 0;
 }
 
-.service-card:hover {
-  transform: none;
-}
-
-.service-card:hover .service-icon {
-  transform: scale(1.05);
-}
-
 .service-cta {
   margin-top: var(--gap-lg);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.service-cta .button {
+  padding: 0.875rem 1.75rem;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  width: 100%;
+  box-sizing: border-box;
+  height: 3rem;
 }
 
 .service-cta .button.primary {
   background-color: var(--primary-color);
+  color: var(--white);
   border: none;
-  padding: 0.75rem 1.5rem;
-  font-weight: 500;
-  font-size: 0.95rem;
-  letter-spacing: 0.3px;
-  border-radius: var(--border-radius-md);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-cta .button.primary:hover {
+  background-color: var(--white);
+  color: var(--secondary-color);
+  box-shadow: 0 4px 12px rgba(74, 88, 43, 0.15);
 }
 
 .services-footer {
   text-align: center;
   position: relative;
   z-index: 2;
+  margin-top: var(--gap-xl);
+}
+
+.services-footer .button {
+  display: inline-flex;
+  margin: 0 auto;
 }
 
 .services-note {
@@ -266,16 +394,30 @@
   }
 
   .services-grid {
-    gap: var(--gap-lg);
     padding: 0 var(--gap-md);
+    gap: var(--gap-lg);
   }
 
   .service-card {
-    padding: var(--gap-md) 0;
+    padding: var(--gap-sm) 0;
   }
 
   .service-features li {
     font-size: 0.9rem;
+  }
+
+  .service-cta {
+    padding: 0;
+  }
+
+  .service-cta .button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    height: 2.75rem;
+  }
+
+  .services-footer {
+    margin-top: var(--gap-lg);
   }
 }
 
@@ -285,25 +427,28 @@
   }
 
   .service-icon-wrapper {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
   }
 
   .service-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 12px;
+    width: 80px;
+    height: 80px;
   }
 
   .service-icon i {
-    font-size: 1.4rem;
+    font-size: 2.2rem;
   }
 
   .service-content h3 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   .service-features li {
     font-size: 0.85rem;
+  }
+
+  .service-cta .button {
+    padding: 0.75rem 1rem;
   }
 }

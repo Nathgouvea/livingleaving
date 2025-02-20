@@ -22,4 +22,15 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.style.overflow = "";
     });
   });
+
+  // Felt so Fair Section Toggle
+  const feltToggle = document.querySelector(".felt-so-fair-toggle");
+  const feltSection = document.querySelector(".felt-so-fair-section");
+
+  if (feltToggle && feltSection) {
+    feltToggle.addEventListener("click", () => {
+      feltSection.classList.toggle("expanded");
+      feltToggle.classList.toggle("expanded");
+    });
+  }
 });

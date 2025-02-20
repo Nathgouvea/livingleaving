@@ -38,6 +38,17 @@
   line-height: 1.2;
   margin-bottom: var(--gap-md);
   animation: fadeInUp 1s ease-out;
+  color: var(--white);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4), 2px 2px 0 rgba(0, 0, 0, 0.3),
+    3px 3px 0 rgba(0, 0, 0, 0.2), 4px 4px 8px rgba(0, 0, 0, 0.3);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform: translateZ(0);
+  transition: transform 0.3s ease;
+}
+
+.hero h1:hover {
+  transform: translateZ(10px);
 }
 
 .hero-subtitle {
@@ -46,7 +57,16 @@
   margin-bottom: var(--gap-lg);
   opacity: 0.9;
   animation: fadeInUp 1s ease-out 0.2s backwards;
-  font-family: sans-serif;
+  font-family: var(--font-primary);
+  color: var(--white);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2), 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  transition: transform 0.3s ease;
+}
+
+.hero-subtitle:hover {
+  transform: translateZ(5px);
 }
 
 @keyframes fadeInUp {

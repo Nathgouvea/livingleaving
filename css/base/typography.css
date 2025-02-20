@@ -1,0 +1,145 @@
+/* Base Typography */
+html {
+  font-size: var(--font-size-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  line-height: var(--line-height-base);
+  color: var(--text-color);
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 1rem;
+  font-family: var(--font-primary);
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-family: var(--font-primary);
+}
+
+/* Lists */
+ul,
+ol {
+  margin-bottom: 1rem;
+  font-family: var(--font-primary);
+}
+
+/* Buttons and Form Elements */
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-primary);
+}
+
+/* Utility Classes */
+.text-small {
+  font-size: 0.875rem;
+}
+
+.text-large {
+  font-size: 1.125rem;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.text-medium {
+  font-weight: 500;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: calc(var(--font-size-h1) * 0.85);
+  }
+
+  h2 {
+    font-size: calc(var(--font-size-h2) * 0.85);
+  }
+
+  h3 {
+    font-size: calc(var(--font-size-h3) * 0.85);
+  }
+
+  h4 {
+    font-size: calc(var(--font-size-h4) * 0.85);
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: calc(var(--font-size-h1) * 0.7);
+  }
+
+  h2 {
+    font-size: calc(var(--font-size-h2) * 0.7);
+  }
+
+  h3 {
+    font-size: calc(var(--font-size-h3) * 0.7);
+  }
+
+  h4 {
+    font-size: calc(var(--font-size-h4) * 0.7);
+  }
+}
