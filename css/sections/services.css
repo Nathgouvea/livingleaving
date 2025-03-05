@@ -404,62 +404,110 @@
 }
 
 .felt-so-fair-intro {
-  background: linear-gradient(
-    165deg,
-    rgba(255, 254, 252, 0.97) 0%,
-    rgba(252, 255, 251, 0.97) 100%
-  );
+  background: rgba(252, 250, 248, 0.95);
   padding: var(--gap-md) var(--gap-lg);
-  border-radius: 30px;
+  border-radius: 20px;
   margin: var(--gap-md) auto;
   max-width: 700px;
-  border: 1px solid rgba(209, 140, 50, 0.08);
-  box-shadow: 0 15px 35px rgba(137, 126, 68, 0.04),
-    inset 0 1px 2px rgba(255, 255, 255, 0.95);
-  transition: all 0.5s ease;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--gap-sm);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(209, 140, 50, 0.08);
+  box-shadow: 0 8px 20px rgba(137, 126, 68, 0.04);
 }
 
+/* Subtle border effect */
 .felt-so-fair-intro::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
   background: linear-gradient(
-    165deg,
-    rgba(209, 140, 50, 0.02) 0%,
-    rgba(137, 126, 68, 0.02) 100%
+    135deg,
+    rgba(209, 140, 50, 0.08),
+    rgba(137, 126, 68, 0.08)
   );
-  z-index: 1;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
-.felt-so-fair-intro:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 20px 40px rgba(137, 126, 68, 0.06),
-    inset 0 1px 3px rgba(255, 255, 255, 0.98);
-  border-color: rgba(209, 140, 50, 0.12);
-}
-
-.felt-so-fair-content::before {
+/* Soft background shapes */
+.felt-so-fair-intro::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    165deg,
-    rgba(137, 126, 68, 0.02) 0%,
-    rgba(209, 140, 50, 0.02) 100%
-  );
-  z-index: 1;
+  background: radial-gradient(
+      circle at 10% 20%,
+      rgba(209, 140, 50, 0.03) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(137, 126, 68, 0.03) 0%,
+      transparent 50%
+    );
+  filter: blur(40px);
+  z-index: -1;
+}
+
+.services-note {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin: 0;
+  font-family: var(--font-primary);
+  font-style: italic;
+  position: relative;
+  font-weight: 500;
+  z-index: 2;
+  letter-spacing: 0.3px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.felt-so-fair-toggle {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(209, 140, 50, 0.1);
+  color: var(--text-color);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xs);
+  padding: var(--gap-xs) var(--gap-lg);
+  transition: all 0.3s ease;
+  position: relative;
+  border-radius: 100px;
+  box-shadow: 0 2px 8px rgba(137, 126, 68, 0.03);
+}
+
+.felt-so-fair-toggle:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px);
+  border-color: rgba(209, 140, 50, 0.15);
+  box-shadow: 0 4px 12px rgba(137, 126, 68, 0.06);
+}
+
+.felt-so-fair-toggle i {
+  color: var(--text-color);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.felt-so-fair-toggle:hover i {
+  opacity: 1;
+  transform: translateY(2px);
 }
 
 @media (max-width: 768px) {
@@ -500,19 +548,19 @@
   }
 
   .felt-so-fair-intro {
-    padding: var(--gap-md);
-    margin: 0;
-    width: 100%;
-    max-width: none;
+    margin: var(--gap-md) var(--gap-md);
+    padding: var(--gap-sm) var(--gap-md);
     border-radius: 20px;
-    box-sizing: border-box;
+    width: auto;
+    gap: var(--gap-xs);
   }
 
   .services-note {
     font-size: 1.1rem;
-    padding: 0;
-    margin: 0;
-    width: 100%;
+  }
+
+  .felt-so-fair-toggle {
+    padding: var(--gap-xs) var(--gap-md);
   }
 }
 
@@ -556,15 +604,18 @@
   }
 
   .felt-so-fair-intro {
-    padding: var(--gap-md);
-    margin: 0;
-    width: 100%;
+    margin: var(--gap-sm);
+    padding: var(--gap-sm);
+    border-radius: 20px;
   }
 
   .services-note {
     font-size: 1rem;
-    padding: 0;
-    margin: 0;
+  }
+
+  .felt-so-fair-toggle {
+    padding: var(--gap-xs) var(--gap-sm);
+    font-size: 0.9rem;
   }
 }
 
