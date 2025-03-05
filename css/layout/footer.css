@@ -128,10 +128,10 @@
 }
 
 .footer-bottom {
-  background-color: var(--secondary-color);
+  background-color: #897e44;
   padding: var(--gap-sm) 0;
   margin-top: var(--gap-lg);
-  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  border-top: 1px solid rgba(255, 255, 255, 0.303);
 }
 
 .footer-bottom-content {
