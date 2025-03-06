@@ -128,13 +128,13 @@
   letter-spacing: 0.5px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 15px rgba(209, 140, 50, 0.15);
-  border: 2px solid var(--primary-color);
+  border: none;
   transform: translateY(0);
 }
 
 .nav-cta .cta-button:hover {
-  background-color: transparent;
-  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  color: var(--white);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(209, 140, 50, 0.2);
 }
@@ -247,11 +247,17 @@
   color: var(--white);
   padding: 1rem 2rem;
   font-size: 1.2rem;
+  border: none;
+  border-radius: var(--border-radius-md);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(209, 140, 50, 0.15);
 }
 
 .mobile-cta .cta-button:hover {
-  background-color: transparent;
-  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(209, 140, 50, 0.2);
 }
 
 /* Desktop Navigation */
