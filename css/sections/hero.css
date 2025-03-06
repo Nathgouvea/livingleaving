@@ -5,9 +5,10 @@
   position: relative;
   padding: calc(var(--section-spacing) / 2) 0;
   margin-top: 80px;
-  background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   overflow: hidden;
 }
 
@@ -193,6 +194,9 @@
     text-align: left;
     margin-top: 60px;
     padding: calc(var(--section-spacing) / 3) 0;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
   }
 
   .hero-text {
