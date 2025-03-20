@@ -175,7 +175,6 @@
 .feature-title {
   font-size: var(--font-size-h3);
   color: var(--text-color);
-  margin-bottom: var(--gap-xl);
   position: relative;
   display: inline-block;
   font-weight: 700;
@@ -185,7 +184,7 @@
 .feature-title::after {
   content: "";
   position: absolute;
-  bottom: -8px;
+  bottom: -4px;
   left: 0;
   width: 40px;
   height: 3px;
@@ -195,8 +194,8 @@
 
 .feature-subtitle {
   font-size: 1rem;
-  color: var(--secondary-color);
-  margin: 0 0 var(--gap-md);
+  color: var(--text-color);
+  margin: var(--gap-xs) 0 var(--gap-md);
   font-weight: 500;
   letter-spacing: 1px;
   opacity: 0.85;
@@ -256,36 +255,15 @@
 .highlight-box {
   display: inline-block;
   font-size: 1.2rem;
-  color: var(--text-color);
-  margin-bottom: var(--gap-lg);
+  color: var(--secondary-color);
   position: relative;
   font-weight: 500;
-  padding: 0.7rem 2rem;
+  padding: 0.7rem 0;
   text-align: center;
   background: var(--green-light);
   border-radius: var(--border-radius-md);
   letter-spacing: 0.5px;
   font-family: var(--font-primary);
-}
-
-.highlight-box::before,
-.highlight-box::after {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border: 1px solid var(--secondary-color);
-  border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.highlight-box::before {
-  left: -4px;
-}
-
-.highlight-box::after {
-  right: -4px;
 }
 
 .feature-image-wrapper {
