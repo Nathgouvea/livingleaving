@@ -1,5 +1,5 @@
 .features-section {
-  padding: var(--gap-md) 0 var(--gap-lg) 0;
+  padding: var(--gap-xs) 0 var(--gap-lg) 0;
   background: linear-gradient(
     165deg,
     rgba(255, 252, 249, 0.97) 0%,

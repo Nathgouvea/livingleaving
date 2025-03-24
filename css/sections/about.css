@@ -152,9 +152,9 @@
 
 .round-text {
   position: relative;
-  margin: var(--gap-lg) auto;
+  margin: var(--gap-sm) auto;
   text-align: center;
-  padding: var(--gap-md);
+  padding: var(--gap-sm);
   background: transparent;
   max-width: 700px;
   overflow: visible;

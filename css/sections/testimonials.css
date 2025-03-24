@@ -1,12 +1,28 @@
 .testimonials-section {
-  padding: var(--section-spacing) 0;
+  padding: calc(var(--section-spacing) * 0.7) 0
+    calc(var(--section-spacing) * 0.3);
   background: linear-gradient(
-    135deg,
-    rgba(252, 250, 248, 0.97),
-    rgba(252, 255, 251, 0.97)
+    165deg,
+    rgba(252, 255, 251, 0.97) 0%,
+    rgba(255, 252, 249, 0.97) 100%
   );
   position: relative;
   overflow: visible;
+}
+
+.testimonials-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    165deg,
+    rgba(74, 88, 43, 0.02) 0%,
+    rgba(209, 140, 50, 0.02) 100%
+  );
+  z-index: 1;
 }
 
 .testimonials-slider {
@@ -14,24 +30,24 @@
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 50px;
   box-sizing: border-box;
   overflow: visible;
 }
 
 .testimonials-track {
   display: flex;
-  gap: 30px;
+  gap: 20px;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   width: fit-content;
   overflow: hidden;
-  margin: 0 20px;
+  margin: 0 10px;
 }
 
 .testimonial-card {
-  width: 420px;
-  flex: 0 0 420px;
+  width: 430px;
+  flex: 0 0 430px;
   background: #ffffff;
   border-radius: 24px;
   box-shadow: 0 8px 20px rgba(137, 126, 68, 0.04),
@@ -89,7 +105,7 @@
 }
 
 .rating {
-  color: var(--secondary-color);
+  color: var(--primary-color);
   margin-bottom: var(--gap-sm);
 }
 
@@ -115,12 +131,16 @@
   color: var(--secondary-color);
   font-size: 1rem;
   font-weight: 600;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .author-info p {
   color: var(--accent-color);
   font-size: 0.85rem;
   opacity: 0.8;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 /* Navigation Styles */
@@ -141,17 +161,18 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   z-index: 3;
+  visibility: visible !important;
 }
 
 .nav-button.prev {
-  left: 10px;
+  left: 0;
 }
 
 .nav-button.next {
-  right: 10px;
+  right: 0;
 }
 
-.nav-button:hover {
+.nav-button:hover:not(:disabled) {
   background: var(--secondary-color);
   color: #ffffff;
   transform: translateY(-50%) scale(1.1);
@@ -162,6 +183,8 @@
   opacity: 0.5;
   cursor: not-allowed;
   pointer-events: none;
+  background: #ffffff;
+  color: var(--secondary-color);
 }
 
 .nav-button i {

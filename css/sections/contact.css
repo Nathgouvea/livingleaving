@@ -1,3 +1,10 @@
+:root {
+  --color-error: #dc3545;
+  --color-error-rgb: 220, 53, 69;
+  --color-success: #28a745;
+  --color-success-rgb: 40, 167, 69;
+}
+
 .contact-section {
   padding: calc(var(--section-spacing) * 1) 0;
   background: linear-gradient(
@@ -343,6 +350,72 @@
 
 .contact-form button:hover i {
   transform: translateX(4px);
+}
+
+.form-success-message {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(var(--color-success-rgb), 0.1);
+  border-radius: var(--border-radius);
+  margin-top: 1rem;
+}
+
+.form-success-message i {
+  font-size: 3rem;
+  color: var(--color-success);
+  margin-bottom: 1rem;
+}
+
+.form-success-message p {
+  color: var(--color-text);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: var(--color-error);
+  background-color: rgba(var(--color-error-rgb), 0.02);
+}
+
+.form-group input.error:hover,
+.form-group textarea.error:hover {
+  border-color: var(--color-error);
+  box-shadow: 0 4px 12px rgba(var(--color-error-rgb), 0.1);
+}
+
+.form-group input.error:focus,
+.form-group textarea.error:focus {
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 4px rgba(var(--color-error-rgb), 0.1);
+}
+
+.error-message {
+  display: none;
+  color: var(--color-error);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.error-message.visible {
+  display: block;
+  animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 992px) {

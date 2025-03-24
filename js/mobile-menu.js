@@ -42,9 +42,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const feltSection = document.querySelector(".felt-so-fair-section");
 
   if (feltToggle && feltSection) {
-    feltToggle.addEventListener("click", () => {
+    // Only toggle when clicking the toggle button itself
+    feltToggle.addEventListener("click", (event) => {
+      event.stopPropagation(); // Prevent event from bubbling up
       feltSection.classList.toggle("expanded");
       feltToggle.classList.toggle("expanded");
+    });
+
+    // Allow links within the Felt so Fair section to work
+    feltSection.addEventListener("click", (event) => {
+      // If the clicked element is a link, let it propagate
+      if (event.target.tagName === "A") {
+        event.stopPropagation();
+        return true;
+      }
     });
   }
 });

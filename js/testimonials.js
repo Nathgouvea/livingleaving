@@ -34,16 +34,24 @@ document.addEventListener("DOMContentLoaded", () => {
     prevButton.disabled = currentPage === 0;
     nextButton.disabled = currentPage === totalPages - 1;
 
-    prevButton.style.visibility = currentPage === 0 ? "hidden" : "visible";
-    nextButton.style.visibility =
-      currentPage === totalPages - 1 ? "hidden" : "visible";
+    // Instead of hiding, we'll just style them differently when disabled
+    prevButton.style.opacity = currentPage === 0 ? "0.5" : "1";
+    nextButton.style.opacity = currentPage === totalPages - 1 ? "0.5" : "1";
+
+    // Always keep them visible
+    prevButton.style.visibility = "visible";
+    nextButton.style.visibility = "visible";
   }
 
   // Calculate slide offset
   function calculateOffset(page) {
     const cardWidth = cards[0].offsetWidth;
-    const gap = 30; // This should match the gap in CSS
-    return -(page * (cardWidth + gap) * cardsPerPage);
+    const gap = 20; // Match the gap from CSS
+    const trackMargin = 10; // Match the track margin from CSS
+    return (
+      -(page * (cardWidth + gap) * cardsPerPage) +
+      (page === 0 ? trackMargin : 0)
+    );
   }
 
   // Go to specific page
